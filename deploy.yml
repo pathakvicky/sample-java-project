@@ -2,7 +2,7 @@
 - hosts: buildserver
   remote_user: ansible
   vars:
-  - warName: Calculator-1.0-SNAPSHOT.jar
+  - warName: sample-java-project.war
   - tomcat_version: 9.0.73
   - warRemotePath: /opt/apache-tomcat-{{ tomcat_version }}/webapps
 
