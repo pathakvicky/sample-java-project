@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: test
   remote_user: ansible
   vars:
   - warName: sample-java-project.war
@@ -7,9 +7,7 @@
   - warRemotePath: /usr/local/tomcat/webapps
 
   tasks:
-  - name: Fetch Username
-    command: whoami
-    
+      
   - name: Copy WAR to Remote server
     become: true
     copy: src=target/{{ warName }} dest={{ warRemotePath }}/{{ warName }}
