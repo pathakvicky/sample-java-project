@@ -1,6 +1,6 @@
 ---
-- hosts: buildserver
-  remote_user: ansible
+- hosts: deployment_server
+  remote_user: labsuser
   vars:
   - warName: sample-java-project.war
   - tomcat_version: 9.0.73
@@ -9,4 +9,4 @@
   tasks:
   - name: Copy WAR to Remote server
     become: true
-    copy: src=target/{{ warName }} dest={{ warRemotePath }}/{{ warName }} owner=tomcat group=tomcat
+    copy: src=target/{{ warName }} dest={{ warRemotePath }}/{{ warName }}
