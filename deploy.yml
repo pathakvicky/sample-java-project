@@ -1,6 +1,6 @@
 ---
-- hosts: deployment_server
-  remote_user: all
+- hosts: all
+#  remote_user: all
   vars:
   - warName: sample-java-project.war
   - tomcat_version: 9.0.73
