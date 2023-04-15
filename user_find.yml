@@ -1,6 +1,6 @@
 ---
-- hosts: all
- # remote_user: labsuser
+- hosts: deployment-server
+  remote_user: labsuser
 
   tasks:
   - name: USer fetch
