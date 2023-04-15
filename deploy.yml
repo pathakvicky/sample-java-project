@@ -1,6 +1,6 @@
 ---
 - hosts: all
-#  remote_user: all
+  remote_user: ansible
   vars:
   - warName: sample-java-project.war
   - tomcat_version: 9.0.73
